@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style6.css" />
+    <title>Modal</title>
+  </head>
+  <body>
+    <div class="container">
+      <button class="btn" data-target="#modal1">Football</button>
+      <button class="btn" data-target="#modal2">Cricket</button>
+      <br/>
+    </div>
+
+    <div class="modal" id="modal1">
+      <div class="header">
+        <div class="title">Football</div>
+        <button class="btn close-modal">&times;</button>
+      </div>
+      <div class="body">
+        Football, also called association football or soccer, is a game involving two teams of 11 players who try to maneuver the ball into the other team's goal without using their hands or arms. The team that scores more goals wins.
+      </div>
+    </div>
+    <div class="modal" id="modal2">
+      <div class="header">
+        <div class="title">cricket</div>
+        <button class="btn close-modal">&times;</button>
+      </div>
+      <div class="body">
+        Each team takes turns batting and playing the field. In cricket, the batter is a batsman and the pitcher is a bowler. The bowler tries to knock down the bail of the wicket. A batsman tries to prevent the bowler from hitting the wicket by hitting the ball.
+      </div>
+    </div>
+
+    <div id="overlay"></div>
+
+    <script src="script6.js"></script>
+  </body>
+</html>
