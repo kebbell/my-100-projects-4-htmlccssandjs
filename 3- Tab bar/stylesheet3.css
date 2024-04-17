@@ -12,6 +12,8 @@ body {
 .tab-container {
   width: 992px;
   margin: 0 auto;
+  justify-content: center;
+  align-items: center
 }
 
 .tab-header {
@@ -29,6 +31,7 @@ body {
   padding: 0.5rem 2rem;
   font-size: 1.25rem;
   border-bottom: 1px solid #ccc;
+  align-items: center
 }
 
 .btn.active {
@@ -53,3 +56,4 @@ body {
 .btn:hover{
   background-color: #e9e9e9;
 }
+
