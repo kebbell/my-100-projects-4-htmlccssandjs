@@ -21,4 +21,3 @@ btns.forEach((btn) => {
     setTimeout(() => this.removeChild(span), 500);
   });
 });
-
