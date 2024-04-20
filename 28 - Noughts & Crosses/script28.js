@@ -11,7 +11,6 @@ cells.forEach((cell) => {
 
 
 function action() {
-  console.log("clicked")
   let currentClass = currentTurn === "Player 1" ? "cross" : "circle"
 this.classList.add(currentClass);
 
