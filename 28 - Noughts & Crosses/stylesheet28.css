@@ -144,3 +144,7 @@ body {
 .overlay.active{
   max-height: 100vh;
 }
+
+.highlight {
+  background-color: lightblue;
+}
