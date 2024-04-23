@@ -1,0 +1,80 @@
+:root {
+  --arrow-width: 7.5px;
+  --tooltip-color: #8d8d8d;
+  --offset: 5px;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+  width: 768px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.tooltip {
+  position: relative;
+  border-bottom: none;
+  padding: 0.5rem 1rem;
+  border-radius: 3px;
+  color: #333;
+  font-size: 1.5rem;
+}
+
+.tooltip::before {
+  visibility: hidden;
+  content: attr(data-content);
+  background-color: var(--tooltip-color);
+  color: white;
+  padding: 0.5rem;
+  border-radius: 5px;
+  position: absolute;
+  white-space: nowrap;
+}
+
+.tooltip::after {
+  visibility: hidden;
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: var(--arrow-width) solid transparent;
+}
+
+.tooltip.top::before {
+  bottom: calc(100% + var(--arrow-width) + var(--offset));
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.tooltip.top::after {
+  bottom: calc(100% + var(--offset));
+  left: 50%;
+  transform: translateX(-50%);
+  border-top-color: var(--tooltip-color);
+  border-bottom-width: 0;
+}
+
+.tooltip.bottom::before {
+  top: calc(100% + var(--arrow-width) + var(--offset));
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.tooltip.bottom::after {
+  top: calc(100% + var(--offset));
+  left: 50%;
+  transform: translateX(-50%);
+  border-bottom-color: var(--tooltip-color);
+  border-top-width: 0;
+}
+
+.tooltip:hover::before,
+.tooltip:hover::after {
+  visibility: visible;
+}
